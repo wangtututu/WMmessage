@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MoneyItemSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group left="0" right="0" top="0" bottom="0">
+		<e:Label id="lName" text="店铺名称" x="43" y="128" size="22" textColor="0x000000"/>
+		<e:Label id="lMoney" text="1000.5" x="213" y="130" size="22" textColor="0x000000"/>
+		<e:Label id="lOther" text="乱七八糟。。。" x="377" y="24" size="22" textColor="0x000000"/>
+		<e:layout>
+			<e:HorizontalLayout gap="40" paddingLeft="40" paddingTop="10" paddingBottom="10"/>
+		</e:layout>
+	</e:Group>
+</e:Skin>

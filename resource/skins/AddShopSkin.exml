@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="AddShopSkin" width="800" height="600" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group left="201" right="-1" top="79" bottom="1">
+		<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xffffff"/>
+		<e:Group height="65" anchorOffsetY="0" y="0" left="0" right="0">
+		<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0x2ACEDD"/>
+		<e:Label text="添加店铺" size="24" scaleX="1" scaleY="1" verticalCenter="0" textColor="0x000000" left="50"/>
+		</e:Group>
+		<e:Group y="71" left="10" right="10">
+			<e:Group anchorOffsetX="0" anchorOffsetY="0" y="0" left="0" right="0">
+			<e:Group x="0" y="0">
+				<e:Label text="店铺名称:" x="12" size="24" verticalCenter="0" textColor="0x000000"/>
+				<e:TextInput id="tName" width="164" height="38" x="135" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0"/>
+				<e:Label text="*" x="6" y="4" textColor="0xf21010" size="22"/>
+			</e:Group>
+			<e:Group x="10" y="10">
+				<e:Label text="联系电话:" x="12" size="24" verticalCenter="0" textColor="0x000000"/>
+				<e:Label text="*" x="6" y="4" textColor="0xF21010" size="22"/>
+				<e:TextInput id="tPhone" width="164" height="38" x="135" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0"/>
+			</e:Group>
+			<e:Group x="20" y="20">
+				<e:Label text="店铺地址:" x="12" size="24" verticalCenter="0" textColor="0x000000"/>
+				<e:Label text="*" x="6" y="4" textColor="0xF21010" size="22"/>
+				<e:TextInput id="tAddr" width="164" height="38" x="135" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0"/>
+			</e:Group>
+			<e:Group x="30" y="30">
+				<e:Label text="拥有人:" x="12" size="24" verticalCenter="0" textColor="0x000000"/>
+				<e:Label text="*" x="6" y="4" textColor="0xF21010" size="22"/>
+				<e:TextInput id="tOwner" width="164" height="38" x="135" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0"/>
+			</e:Group>
+			<e:Group x="40" y="40">
+				<e:Label text="店铺描述:" x="12" size="24" verticalCenter="0" textColor="0x000000"/>
+				<e:Label text="*" x="6" y="4" textColor="0xF21010" size="22"/>
+				<e:TextInput id="tDesc" width="164" height="38" x="135" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0"/>
+			</e:Group>
+			<e:Group x="50" y="50">
+				<e:Label text="店铺类型:" x="12" size="24" verticalCenter="0" textColor="0x000000"/>
+				<e:Label text="*" x="6" y="4" textColor="0xF21010" size="22"/>
+				<e:TextInput id="tTp" width="164" height="38" x="135" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0"/>
+			</e:Group>
+			<e:Group x="60" y="60">
+				<e:Label text="起送金额:" x="12" size="24" verticalCenter="0" textColor="0x000000"/>
+				<e:TextInput id="lQisong" width="164" height="38" x="135" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0"/>
+			</e:Group>
+			<e:Group x="70" y="70">
+				<e:Label text="配送费:" x="12" size="24" verticalCenter="0" textColor="0x000000"/>
+				<e:TextInput id="tPeisong" width="164" height="38" x="135" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0"/>
+			</e:Group>
+			<e:layout>
+				<e:TileLayout requestedColumnCount="2" horizontalGap="12" paddingLeft="0" paddingRight="10" paddingTop="15" verticalGap="12" paddingBottom="10"/>
+			</e:layout>
+			</e:Group>
+			<e:Group anchorOffsetX="0" anchorOffsetY="0" y="218" left="0" right="0">
+			<e:Label text="拥有分类:" x="12" size="24" textColor="0x000000" verticalCenter="0.5"/>
+				<e:Label text="*" x="6" y="4" textColor="0xF21010" size="22"/>
+			<e:TextInput id="tClass" width="337" height="38" x="135" y="1" anchorOffsetX="0" enabled="false"/>
+			<e:Button id="bClass" label="选择分类" x="499" y="2" anchorOffsetX="0" width="95" anchorOffsetY="0" height="36"/>
+			<e:layout>
+				<e:BasicLayout/>
+			</e:layout>
+			</e:Group>
+			<e:Group anchorOffsetX="0" anchorOffsetY="0" y="270" left="0" right="0">
+			<e:layout>
+				<e:BasicLayout/>
+			</e:layout>
+			<e:Label text="满减优惠:" x="12" size="24" textColor="0x000000" scaleX="1" scaleY="1" verticalCenter="0"/>
+			<e:Group x="135" y="3">
+				<e:Label text="满" x="3" size="24" textColor="0x000000" verticalCenter="0"/>
+				<e:TextInput id="tMan1" width="66" height="38" x="33" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0"/>
+				<e:Label text="减" x="107" size="24" textColor="0x000000" verticalCenter="0"/>
+				<e:TextInput id="tJian1" width="66" height="38" x="139" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0"/>
+				<e:layout>
+				<e:BasicLayout/>
+				</e:layout>
+			</e:Group>
+			<e:Group x="135" y="48">
+				<e:Label text="满" x="3" size="24" textColor="0x000000" verticalCenter="0"/>
+				<e:TextInput id="tMan3" width="66" height="38" x="33" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0"/>
+				<e:Label text="减" x="107" size="24" textColor="0x000000" verticalCenter="0"/>
+				<e:TextInput id="tJian3" width="66" height="38" x="139" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0"/>
+				<e:layout>
+				<e:BasicLayout/>
+				</e:layout>
+			</e:Group>
+			<e:Group x="380" y="3">
+				<e:Label text="满" x="3" size="24" textColor="0x000000" verticalCenter="0"/>
+				<e:TextInput id="tMan2" width="66" height="38" x="33" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0"/>
+				<e:Label text="减" x="107" size="24" textColor="0x000000" verticalCenter="0"/>
+				<e:TextInput id="tJian2" width="66" height="38" x="139" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0"/>
+				<e:layout>
+				<e:BasicLayout/>
+				</e:layout>
+			</e:Group>
+			</e:Group>
+			<e:Group anchorOffsetX="0" anchorOffsetY="0" y="367" left="0" right="0">
+				<e:Label text="添加图片:" x="12" size="24" textColor="0x000000" verticalCenter="0.5"/>
+				<e:Label text="*" x="6" y="4" textColor="0xF21010" size="22"/>
+				<e:Button id="bPic" label="选择文件" x="135" y="2" anchorOffsetX="0" width="95" anchorOffsetY="0" height="36"/>
+				<e:Label id="lPic" text="" x="241" y="18" textColor="0x000000" size="16" textAlign="center"/>
+				<e:layout>
+				<e:BasicLayout/>
+				</e:layout>
+			</e:Group>
+		</e:Group>
+		<e:Group id="gAddBtn" horizontalCenter="0" bottom="20">
+			<e:Rect fillColor="0x25cc10" left="-1" right="1" top="0" bottom="0"/>
+			<e:Label text="确认添加" verticalCenter="0" horizontalCenter="0" right="100" left="100" top="20" bottom="20" size="26"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

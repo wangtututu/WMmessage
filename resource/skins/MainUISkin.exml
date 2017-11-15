@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MainUISkin" width="800" height="600" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xffffff" locked="true"/>
+	<e:Group height="80" left="0" right="0" top="0" anchorOffsetY="0">
+		<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xdf2a61"/>
+		<e:Label text="XX外卖后台管理系统" verticalCenter="0" horizontalCenter="0"/>
+		<e:Label id="lLogin" text="登录/注册" y="8" size="18" right="11"/>
+	</e:Group>
+	<e:Group width="200" top="80" bottom="10" anchorOffsetX="0" left="0">
+		<e:Rect width="1" top="0" bottom="0" right="0"/>
+		<e:Scroller id="scroller1" anchorOffsetX="0" anchorOffsetY="0" left="0" right="0" bottom="0" top="0" scrollPolicyH="off">
+			<e:Group anchorOffsetX="0" width="123" anchorOffsetY="0" height="366">
+				<e:Group id="gMainBtn" y="0" left="0" right="0" width="200" x="0" scaleX="1" scaleY="1">
+					<e:Label text="首页" textColor="0x000000" horizontalCenter="0" top="19" bottom="20" size="24" rotation="359.02"/>
+					<e:Rect height="2" left="0" right="0" bottom="0"/>
+				</e:Group>
+				<e:Group id="gListBtn" y="66" left="0" right="0" width="200" x="0" scaleX="1" scaleY="1">
+					<e:Label text="商家列表" textColor="0x000000" horizontalCenter="0" top="20" bottom="20" size="24"/>
+					<e:Rect height="2" left="0" right="0" bottom="0"/>
+				</e:Group>
+				<e:Group id="gShopBtn" y="106" left="0" right="0" width="200" x="40" scaleX="1" scaleY="1">
+					<e:Label text="注册商家" textColor="0x000000" horizontalCenter="0" top="20" bottom="20" size="24"/>
+					<e:Rect height="2" left="0" right="0" bottom="0"/>
+				</e:Group>
+				<e:Group id="gManBtn" y="116" left="0" right="0" width="200" x="50" scaleX="1" scaleY="1">
+					<e:Label text="注册用户" textColor="0x000000" horizontalCenter="0" top="20" bottom="20" size="24"/>
+					<e:Rect height="2" left="0" right="0" bottom="0"/>
+				</e:Group>
+				<e:layout>
+					<e:VerticalLayout gap="1"/>
+				</e:layout>
+			</e:Group>
+		</e:Scroller>
+	</e:Group>
+</e:Skin>

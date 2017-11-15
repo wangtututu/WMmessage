@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ShopDetailSkin" width="800" height="600" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group left="200" right="0" top="80" bottom="0">
+		<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xFFFFFF"/>
+		<e:Group height="65" anchorOffsetY="0" y="0" left="0" right="0">
+			<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0x2acedd"/>
+			<e:Label id="lName" text="店铺名称1" size="24" scaleX="1" scaleY="1" verticalCenter="0" textColor="0x000000" left="50"/>
+			<e:Label id="lAdd" text="添加菜品" size="22" bottom="11" right="12"/>
+		</e:Group>
+		<e:Group height="60" left="0" right="0" y="65">
+			<e:Group top="0" bottom="0" height="60">
+				<e:Rect left="0" right="0" top="0" bottom="0" fillAlpha="0" strokeWeight="1"/>
+				<e:Label text="店铺介绍" verticalCenter="0" horizontalCenter="0" size="20" textColor="0x000000" left="25" right="25"/>
+			</e:Group>
+			<e:Group top="0" bottom="0" height="60">
+				<e:Rect left="0" right="0" top="0" bottom="0" fillAlpha="0" strokeWeight="1"/>
+				<e:Label text="店铺菜单" verticalCenter="0" horizontalCenter="0" size="20" textColor="0x000000" left="25" right="25"/>
+			</e:Group>
+			<e:Group top="0" bottom="0" height="60">
+			<e:Rect left="0" right="0" top="0" bottom="0" fillAlpha="0" strokeWeight="1"/>
+			<e:Label text="日流水" verticalCenter="0" horizontalCenter="0" size="20" textColor="0x000000" left="25" right="25"/>
+			</e:Group>
+			<e:Group top="0" bottom="0" x="200" height="60">
+			<e:Rect left="0" right="0" top="0" bottom="0" fillAlpha="0" strokeWeight="1"/>
+			<e:Label text="周流水" verticalCenter="0" horizontalCenter="0" size="20" textColor="0x000000" left="25" right="25"/>
+			</e:Group>
+			<e:Group top="0" bottom="0" right="0" height="60">
+			<e:Rect left="0" right="0" top="0" bottom="0" fillAlpha="0" strokeWeight="1"/>
+			<e:Label text="月流水" verticalCenter="0" horizontalCenter="0" size="20" textColor="0x000000" left="25" right="25"/>
+			</e:Group>
+			<e:Group top="0" bottom="0" right="0" height="60">
+			<e:Label text="按日期查询" verticalCenter="0" horizontalCenter="0" size="20" textColor="0x000000" left="25" right="25"/>
+			<e:TextInput width="150" height="30" x="86" y="22" prompt="如20170102"/>
+			<e:Image source="search_png" x="274" y="8" width="28" height="28"/>
+			<e:layout>
+				<e:HorizontalLayout verticalAlign="middle" horizontalAlign="center" paddingLeft="25" paddingRight="25" gap="15"/>
+			</e:layout>
+			</e:Group>
+			<e:layout>
+			<e:HorizontalLayout verticalAlign="contentJustify" paddingLeft="50" paddingRight="50" horizontalAlign="right"/>
+			</e:layout>
+		</e:Group>
+	</e:Group>
+</e:Skin>

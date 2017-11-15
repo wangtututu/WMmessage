@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="AddBlockSkin" width="800" height="600" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect left="0" right="0" top="0" bottom="0" fillAlpha="0.5"/>
+	<e:Group width="400" height="300" verticalCenter="0" horizontalCenter="0">
+		<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xcccccc"/>
+		<e:Group x="43" y="61">
+			<e:Group y="0" x="0">
+				<e:Label text="名称:" x="10" size="24" verticalCenter="0" textColor="0x000000"/>
+				<e:TextInput id="tName" width="242" height="34" x="73" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0"/>
+			</e:Group>
+			<e:Group id="gType1" x="16" y="51">
+				<e:Rect left="0" right="0" top="0" bottom="0" fillAlpha="0" strokeWeight="1"/>
+				<e:Label text="店铺类型" size="22" textAlign="center" left="18" right="18" top="10" bottom="10" textColor="0x000000"/>
+				<e:Image source="xuanzhong_png" width="26" height="26" right="0" top="0"/>
+			</e:Group>
+			<e:Group id="gType2" x="176" y="51" anchorOffsetX="0" width="125">
+				<e:Rect left="0" right="0" top="0" bottom="0" fillAlpha="0" strokeWeight="1"/>
+				<e:Label text="店铺名称" size="22" textAlign="center" left="18" right="18" top="10" bottom="10" textColor="0x000000"/>
+				<e:Image source="xuanzhong_png" width="26" height="26" right="0" top="0"/>
+			</e:Group>
+			<e:Group x="0" y="111">
+				<e:Label text="图片:" x="10" size="24" verticalCenter="0" textColor="0x000000"/>
+				<e:Button id="bPic" label="选择文件" x="74" anchorOffsetX="0" width="90" anchorOffsetY="0" height="35" verticalCenter="0"/>
+				<e:Label id="lPic" text="" x="175" textAlign="center" size="20" verticalCenter="12"/>
+			</e:Group>
+		</e:Group>
+		<e:Group id="gClick" y="231" horizontalCenter="0">
+			<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0x23e214"/>
+			<e:Label text="确认" size="24" top="12" bottom="12" left="80" right="80" textColor="0x000000"/>
+		</e:Group>
+		<e:Group height="43" anchorOffsetY="0" left="0" right="0" top="0">
+			<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xd64137"/>
+			<e:Label id="lTitle" text="添加" textColor="0x000000" size="22" verticalCenter="0" horizontalCenter="0"/>
+			<e:Image id="iReturn" source="close_png" x="4" verticalCenter="0" width="28" height="28"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

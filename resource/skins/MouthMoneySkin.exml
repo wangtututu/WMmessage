@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MouthMoneySkin" width="800" height="600" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group left="200" right="0" top="80" bottom="0">
+		<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xFFFFFF"/>
+		<e:Group height="65" anchorOffsetY="0" y="0" left="0" right="0">
+		<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0x2ACEDD"/>
+			<e:Label text="(2017-11)" x="156" verticalCenter="0.5" size="22" id="lDate"/>
+		<e:Label id="lName" text="月总流水" size="24" scaleX="1" scaleY="1" verticalCenter="0" textColor="0x000000" left="50"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

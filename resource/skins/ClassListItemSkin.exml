@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ClassListItemSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="gClick" left="0" right="0" top="0" bottom="0" width="120">
+		<e:Label id="lName" text="分类" top="8" bottom="8" textColor="0x000000" size="22" textAlign="center" y="8" scaleX="1" scaleY="1" horizontalCenter="0"/>
+		<e:Rect left="0" right="0" top="0" bottom="0" fillAlpha="0" strokeWeight="1" x="0" y="0" scaleX="1" scaleY="1"/>
+		<e:Image id="iXuan" source="xuanzhong_png" right="0" top="1" width="20" height="20" x="84" y="0" scaleX="1" scaleY="1"/>
+	</e:Group>
+</e:Skin>

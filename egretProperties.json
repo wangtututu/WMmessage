@@ -1,0 +1,44 @@
+{
+  "native": {
+    "path_ignore": []
+  },
+  "publish": {
+    "web": 0,
+    "native": 1,
+    "path": "bin-release"
+  },
+  "egret_version": "5.0.9",
+  "template": {},
+  "eui": {
+    "exmlRoot": [
+      "resource/eui_skins",
+      "resource/"
+    ],
+    "themes": [
+      "resource/default.thm.json"
+    ],
+    "exmlPublishPolicy": "content"
+  },
+  "modules": [
+    {
+      "name": "egret"
+    },
+    {
+      "name": "res"
+    },
+    {
+      "name": "eui"
+    },
+    {
+      "name": "qiniusdk",
+      "path": "./libs/qiniusdk/src"
+    },
+    {
+      "name": "tween"
+    },
+    {
+      "name": "promise",
+      "path": "./promise"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ShouyeItemSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image id="iPic" width="60" height="60" horizontalCenter="0" top="0"/>
+	<e:Label id="lName" text="类型" y="71" size="22" textColor="0x000000" horizontalCenter="0" left="18" right="18" textAlign="center"/>
+	<e:Group id="gDel" left="0" right="0" top="0" bottom="0" visible="false">
+		<e:Rect left="0" right="0" top="0" bottom="0" fillAlpha="0"/>
+		<e:Image source="del_png" right="0" top="0" width="28" height="28"/>
+	</e:Group>
+	<e:Group id="gChange" left="0" right="0" top="0" bottom="0" visible="false">
+		<e:Rect left="0" right="0" top="0" bottom="0" fillAlpha="0"/>
+		<e:Image right="0" top="0" width="28" height="28" source="change_png"/>
+	</e:Group>
+</e:Skin>

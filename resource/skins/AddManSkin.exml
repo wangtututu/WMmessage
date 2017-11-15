@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="AddManSkin" width="800" height="600" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group left="201" right="-1" top="79" bottom="1">
+		<e:Rect left="1" right="-1" top="0" bottom="0" fillColor="0xFFFFFF"/>
+		<e:Group height="65" anchorOffsetY="0" y="0" left="0" right="0">
+		<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0x2ACEDD"/>
+		<e:Label text="注册用户" size="24" scaleX="1" scaleY="1" verticalCenter="0" textColor="0x000000" left="50"/>
+		</e:Group>
+		<e:Group y="71" left="10" right="10">
+		<e:Group anchorOffsetX="0" anchorOffsetY="0" y="0" left="0" right="0">
+			<e:Group x="0" y="0">
+			<e:Label text="用户姓名:" x="12" size="24" verticalCenter="0" textColor="0x000000"/>
+				<e:Label text="*" x="6" y="4" textColor="0xF21010" size="22"/>
+			<e:TextInput id="tName" width="164" height="38" x="135" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0"/>
+			</e:Group>
+			<e:Group x="10" y="10">
+			<e:Label text="联系电话:" x="12" size="24" verticalCenter="0" textColor="0x000000"/>
+				<e:Label text="*" x="6" y="4" textColor="0xF21010" size="22"/>
+			<e:TextInput id="tPhone" width="164" height="38" x="135" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0"/>
+			</e:Group>
+			<e:Group x="20" y="20">
+			<e:Label text="用户地址:" x="12" size="24" verticalCenter="0" textColor="0x000000"/>
+				<e:Label text="*" x="6" y="4" textColor="0xF21010" size="22"/>
+			<e:TextInput id="tAddr" width="164" height="38" x="135" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0"/>
+			</e:Group>
+			<e:Group x="30" y="30">
+			<e:Label text="登录密码:" x="12" size="24" verticalCenter="0" textColor="0x000000"/>
+				<e:Label text="*" x="6" y="4" textColor="0xF21010" size="22"/>
+			<e:TextInput id="tPass" width="164" height="38" x="135" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0"/>
+			</e:Group>
+			<e:Group x="40" y="40">
+			<e:Label text="qq/微信:" x="12" size="24" verticalCenter="0" textColor="0x000000"/>
+				<e:Label text="*" x="6" y="4" textColor="0xF21010" size="22"/>
+			<e:TextInput id="tQQ" width="164" height="38" x="135" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0"/>
+			</e:Group>
+			<e:Group x="50" y="50">
+			<e:Label text="范围:" x="12" size="24" verticalCenter="0" textColor="0x000000"/>
+			<e:TextInput id="tArea" width="164" height="38" x="135" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0" enabled="false"/>
+			</e:Group>
+			<e:Group x="60" y="60">
+				<e:Label text="店铺ID:" x="12" size="24" verticalCenter="0" textColor="0x000000"/>
+				<e:TextInput id="tShopID" width="164" height="38" x="135" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0"/>
+			</e:Group>
+			<e:Group x="70" y="70">
+				<e:Label text="(当注册卖家时，需填写店铺ID)" x="-2" size="18" verticalCenter="0" textColor="0xfc0c0c"/>
+			</e:Group>
+			<e:layout>
+			<e:TileLayout requestedColumnCount="2" horizontalGap="12" paddingLeft="0" paddingRight="10" paddingTop="15" verticalGap="12" paddingBottom="10"/>
+			</e:layout>
+		</e:Group>
+		<e:Group anchorOffsetX="0" anchorOffsetY="0" y="219" left="0" right="0">
+			<e:Label text="选择类型:" x="12" size="24" textColor="0x000000" verticalCenter="0"/>
+			<e:Label text="*" x="6" y="4" textColor="0xF21010" size="22"/>
+			<e:Group id="gType1" x="155" verticalCenter="0">
+				<e:Rect left="0" right="0" top="0" bottom="0" strokeWeight="1" fillAlpha="0"/>
+				<e:Label text="卖家" textAlign="center" size="22" verticalCenter="0" top="8" bottom="8" left="30" right="30" textColor="0x000000"/>
+				<e:Image id="iType1" source="xuanzhong_png" right="0" top="1"/>
+			</e:Group>
+			<e:Group id="gType2" x="290" verticalCenter="0">
+				<e:Rect left="0" right="0" top="0" bottom="0" strokeWeight="1" fillAlpha="0"/>
+				<e:Label text="送餐员" textAlign="center" size="22" verticalCenter="0" top="8" bottom="8" left="30" right="30" textColor="0x000000"/>
+				<e:Image id="iType2" source="xuanzhong_png" right="0" top="1"/>
+			</e:Group>
+			<e:Group id="gType3" x="444" verticalCenter="0" y="10">
+				<e:Rect left="0" right="0" top="0" bottom="0" strokeWeight="1" fillAlpha="0"/>
+				<e:Label text="管理员" textAlign="center" size="22" verticalCenter="0" top="8" bottom="8" left="30" right="30" textColor="0x000000"/>
+				<e:Image id="iType3" source="xuanzhong_png" right="0" top="1"/>
+			</e:Group>
+			<e:layout>
+			<e:BasicLayout/>
+			</e:layout>
+		</e:Group>
+		</e:Group>
+		<e:Group id="gAddBtn" horizontalCenter="0" bottom="20">
+		<e:Rect fillColor="0x25CC10" left="-1" right="1" top="0" bottom="0"/>
+		<e:Label text="确认添加" verticalCenter="0" horizontalCenter="0" right="100" left="100" top="20" bottom="20" size="26"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>
