@@ -8,23 +8,23 @@
 			<e:Label id="lAdd" text="添加菜品" size="22" bottom="11" right="12"/>
 		</e:Group>
 		<e:Group height="60" left="0" right="0" y="65">
-			<e:Group top="0" bottom="0" height="60">
+			<e:Group id="gIntex" top="0" bottom="0" height="60">
 				<e:Rect left="0" right="0" top="0" bottom="0" fillAlpha="0" strokeWeight="1"/>
 				<e:Label text="店铺介绍" verticalCenter="0" horizontalCenter="0" size="20" textColor="0x000000" left="25" right="25"/>
 			</e:Group>
-			<e:Group top="0" bottom="0" height="60">
+			<e:Group id="gMenu" top="0" bottom="0" height="60">
 				<e:Rect left="0" right="0" top="0" bottom="0" fillAlpha="0" strokeWeight="1"/>
 				<e:Label text="店铺菜单" verticalCenter="0" horizontalCenter="0" size="20" textColor="0x000000" left="25" right="25"/>
 			</e:Group>
-			<e:Group top="0" bottom="0" height="60">
+			<e:Group id="gDay" top="0" bottom="0" height="60">
 			<e:Rect left="0" right="0" top="0" bottom="0" fillAlpha="0" strokeWeight="1"/>
 			<e:Label text="日流水" verticalCenter="0" horizontalCenter="0" size="20" textColor="0x000000" left="25" right="25"/>
 			</e:Group>
-			<e:Group top="0" bottom="0" x="200" height="60">
+			<e:Group id="gWeek" top="0" bottom="0" x="200" height="60">
 			<e:Rect left="0" right="0" top="0" bottom="0" fillAlpha="0" strokeWeight="1"/>
 			<e:Label text="周流水" verticalCenter="0" horizontalCenter="0" size="20" textColor="0x000000" left="25" right="25"/>
 			</e:Group>
-			<e:Group top="0" bottom="0" right="0" height="60">
+			<e:Group id="gMonth" top="0" bottom="0" right="0" height="60">
 			<e:Rect left="0" right="0" top="0" bottom="0" fillAlpha="0" strokeWeight="1"/>
 			<e:Label text="月流水" verticalCenter="0" horizontalCenter="0" size="20" textColor="0x000000" left="25" right="25"/>
 			</e:Group>

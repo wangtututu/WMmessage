@@ -3,7 +3,7 @@
  **/
 class QiniuUploader {
     public static onComplete;
-    public static upload(): void {
+    public static Init(): void {
         var uploader = window["Qiniu"].uploader({
             runtimes: 'html5,flash,html4',      // 上传模式，依次退化
             browse_button: 'pickfiles',         // 上传选择的点选按钮，必需

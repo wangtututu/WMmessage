@@ -153,6 +153,8 @@ var Main = (function (_super) {
         this.addChild(uiLayer);
         Api.ViewManager.closeAll();
         Api.ViewManager.openView(MainUI);
+        Api.ViewManager.openView(Login);
+        QiniuUploader.Init();
     };
     return Main;
 }(eui.UILayer));

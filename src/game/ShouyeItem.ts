@@ -42,12 +42,27 @@ class ShouyeItem extends eui.ItemRenderer {
     private onGetComplete(event: egret.Event): void {
         var request = <egret.HttpRequest>event.currentTarget;
         console.log(request.response);
-        if (request.response) { }
+        if (request.response.length > 20) {
+            var shouye = Api.ViewManager.getView(Shouye);
+            // shouye["getMsg"]();
+            // egret.callLater(() => { shouye["onDel"](); }, this)
+            console.log(shouye["_data"])
+            var _data = shouye["_data"];
+            for(var i = 0;i<_data.length;i++){
+                if(_data[i].id = this.data.id){
+                    _data.splice(i,1);
+                    break;
+                }
+            }
+            shouye.setData(_data);
+        }else{
+            alert("删除失败")
+        }
         // this.list.dataProvider = new eui.ArrayCollection(this._data);
     }
     private onChange(): void {
         // alert("修改" + this.data.name)
-        Api.ViewManager.openView(AddBlock,this.data);
+        Api.ViewManager.openView(AddBlock, this.data);
     }
 
 }

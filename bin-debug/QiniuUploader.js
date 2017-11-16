@@ -7,7 +7,7 @@ var __reflect = (this && this.__reflect) || function (p, c, t) {
 var QiniuUploader = (function () {
     function QiniuUploader() {
     }
-    QiniuUploader.upload = function () {
+    QiniuUploader.Init = function () {
         var uploader = window["Qiniu"].uploader({
             runtimes: 'html5,flash,html4',
             browse_button: 'pickfiles',

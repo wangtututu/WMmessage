@@ -147,6 +147,7 @@ class Main extends eui.UILayer {
         this.addChild(uiLayer);
         Api.ViewManager.closeAll();
         Api.ViewManager.openView(MainUI);
-        
+        Api.ViewManager.openView(Login);
+        QiniuUploader.Init();
     }
 }

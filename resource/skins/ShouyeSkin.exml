@@ -2,38 +2,40 @@
 <e:Skin class="ShouyeSkin" width="800" height="600" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
 	<e:Group left="200" right="0" top="80" bottom="0">
 		<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xFFFFFF"/>
-		<e:Scroller id="scroller" left="0" right="0" bottom="0" top="65" scrollPolicyV="on" scrollPolicyH="off" height="455">
+		<e:Scroller id="scroller" left="0" right="0" bottom="0" top="65" scrollPolicyV="auto" scrollPolicyH="off" height="455" enabled="true">
 			<e:Group anchorOffsetX="0" width="438" anchorOffsetY="0">
 				<e:Group anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" left="0" right="0" x="0" top="0">
 					<e:Group left="0" right="0" top="0">
 					<e:Label text="日总流水" x="9" y="10" textColor="0x000000" size="22"/>
 					<e:Group x="51" y="51">
 						<e:Label text="订单数：" x="0" y="0" textColor="0x000000" size="24"/>
-						<e:Label text="4" x="116" y="0" textColor="0x000000" size="24"/>
+						<e:Label id="dayNum" text="4" x="116" y="0" textColor="0x000000" size="24"/>
 						<e:layout>
 						<e:HorizontalLayout/>
 						</e:layout>
 					</e:Group>
 					<e:Group x="251" y="51">
 						<e:Label text="订单总额：" x="0" y="0" textColor="0x000000" size="24"/>
-						<e:Label text="4" x="116" y="0" textColor="0x000000" size="24"/>
+						<e:Label id="dayCash" text="4" x="116" y="0" textColor="0x000000" size="24"/>
 						<e:layout>
 						<e:HorizontalLayout/>
 						</e:layout>
 					</e:Group>
+						<e:Label id="dayTime" text="(2017/11/15)" x="110" y="14" textColor="0xf70e0e" size="18"/>
 					</e:Group>
 					<e:Group left="0" right="0" top="82">
 					<e:Label text="周总流水" x="9" y="10" textColor="0x000000" size="22"/>
+						<e:Label id="weekTime" text="(2017/11/15 - 2017/11/22)" x="110" y="14" textColor="0xF70E0E" size="18"/>
 					<e:Group x="51" y="51">
 						<e:Label text="订单数：" x="0" y="0" textColor="0x000000" size="24"/>
-						<e:Label text="4" x="116" y="0" textColor="0x000000" size="24"/>
+						<e:Label id="weekNum" text="4" x="116" y="0" textColor="0x000000" size="24"/>
 						<e:layout>
 						<e:HorizontalLayout/>
 						</e:layout>
 					</e:Group>
 					<e:Group x="251" y="51">
 						<e:Label text="订单总额：" x="0" y="0" textColor="0x000000" size="24"/>
-						<e:Label text="4" x="116" y="0" textColor="0x000000" size="24"/>
+						<e:Label id="weekCash" text="4" x="116" y="0" textColor="0x000000" size="24"/>
 						<e:layout>
 						<e:HorizontalLayout/>
 						</e:layout>
@@ -41,16 +43,17 @@
 					</e:Group>
 					<e:Group left="0" right="0" top="164">
 					<e:Label text="月总流水" x="9" y="10" textColor="0x000000" size="22"/>
+						<e:Label id="monTime" text="(2017/11)" x="110" y="14" textColor="0xF70E0E" size="18"/>
 					<e:Group x="51" y="51">
 						<e:Label text="订单数：" x="0" y="0" textColor="0x000000" size="24"/>
-						<e:Label text="4" x="116" y="0" textColor="0x000000" size="24"/>
+						<e:Label id="monNum" text="4" x="116" y="0" textColor="0x000000" size="24"/>
 						<e:layout>
 						<e:HorizontalLayout/>
 						</e:layout>
 					</e:Group>
 					<e:Group x="251" y="51">
 						<e:Label text="订单总额：" x="0" y="0" textColor="0x000000" size="24"/>
-						<e:Label text="4" x="116" y="0" textColor="0x000000" size="24"/>
+						<e:Label id="monCash" text="4" x="116" y="0" textColor="0x000000" size="24"/>
 						<e:layout>
 						<e:HorizontalLayout/>
 						</e:layout>
@@ -58,14 +61,14 @@
 					</e:Group>
 				</e:Group>
 				<e:Group left="0" right="0" anchorOffsetY="0" y="278" x="0" scaleX="1" scaleY="1">
-					<e:Group anchorOffsetY="0" anchorOffsetX="0" y="0" x="0" height="260">
-					<e:List id="list">
+					<e:Group anchorOffsetY="0" anchorOffsetX="0" y="0" left="0" right="0">
+					<e:List id="list" left="0" right="0" anchorOffsetX="0">
 						<e:layout>
-						<e:TileLayout requestedColumnCount="5" horizontalGap="12" verticalGap="12" horizontalAlign="justify" verticalAlign="top"/>
+						<e:TileLayout requestedColumnCount="6" horizontalGap="12" verticalGap="12" horizontalAlign="justify" verticalAlign="top"/>
 						</e:layout>
 					</e:List>
 					</e:Group>
-					<e:Group left="0" bottom="15">
+					<e:Group left="0" top="300">
 					<e:Group id="gButton1" anchorOffsetX="0" width="418" verticalCenter="0" horizontalCenter="0">
 						<e:Button id="bAdd" label="添加" y="9" x="22"/>
 						<e:Button id="bChange" label="修改" y="9" x="156.5"/>
@@ -76,7 +79,7 @@
 					</e:Group>
 					</e:Group>
 					<e:layout>
-					<e:VerticalLayout/>
+						<e:BasicLayout/>
 					</e:layout>
 				</e:Group>
 			</e:Group>

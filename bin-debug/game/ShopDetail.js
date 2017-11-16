@@ -24,6 +24,11 @@ var ShopDetail = (function (_super) {
     }
     ShopDetail.prototype.onInit = function () {
         this.lAdd.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onAdd, this);
+        this.gIntex.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onIndex, this);
+        this.gMenu.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onMenu, this);
+        this.gDay.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onDay, this);
+        this.gWeek.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onWeek, this);
+        this.gMonth.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onMonth, this);
     };
     ShopDetail.prototype.onOpen = function (para) {
         this._para = para;
@@ -31,6 +36,17 @@ var ShopDetail = (function (_super) {
     };
     ShopDetail.prototype.onAdd = function () {
         Api.ViewManager.openView(AddDish, this._para);
+    };
+    ShopDetail.prototype.onMenu = function () {
+    };
+    ShopDetail.prototype.onIndex = function () {
+    };
+    ShopDetail.prototype.onDay = function () {
+        // console.log(Time.NOW)
+    };
+    ShopDetail.prototype.onWeek = function () {
+    };
+    ShopDetail.prototype.onMonth = function () {
     };
     return ShopDetail;
 }(BaseView));

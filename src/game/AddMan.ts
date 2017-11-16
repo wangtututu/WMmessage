@@ -30,6 +30,7 @@ class AddMan extends BaseView {
         this.gType1.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onType1, this);
         this.gType2.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onType2, this);
         this.gType3.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onType3, this);
+        this.gAddBtn.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onAdd,this)
     }
 
     public onOpen(para): void {
@@ -39,6 +40,10 @@ class AddMan extends BaseView {
         }
     }
     private onAdd(): void {
+        if(this.tPhone.text && this.tArea.text && this.tName.text && this.tAddr.text && this.tPass.text && this.tQQ.text){
+             alert("信息不完整")
+            return;
+        }
         var data = "id=" + this.tPhone.text + "&area=" + this.tArea.text + "&name=" + this.tName.text + "&ddr=" + this.tAddr.text + "&pass=" + this.tPass.text + "&qq=" + this.tQQ.text + "&roletype=" + this._roletype + "&res=" + this._res;
         var request = Consts.CreateRequest("http://" + Consts._IP + ":8099/admin/register?" + data, egret.HttpMethod.GET);
         request.responseType = egret.HttpResponseType.TEXT;
@@ -49,6 +54,11 @@ class AddMan extends BaseView {
     private onGetComplete(event: egret.Event): void {
         var request = <egret.HttpRequest>event.currentTarget;
         console.log(request.response)
+        if(request.response.length < 20){
+            alert("添加失败")
+            return;
+        }
+        Api.ViewManager.openViewAndClose(AddMan,AddMan);
         
     }
     private onType1(): void {
@@ -70,7 +80,7 @@ class AddMan extends BaseView {
         this.iType3.visible = true;
         this.iType1.visible = false;
         this.iType2.visible = false;
-        this._roletype = 1;
+        this._roletype = 10;
     }
     private onClear(): void {
         this.tName.text = "";
@@ -80,6 +90,8 @@ class AddMan extends BaseView {
         this.tQQ.text = "";
         this.tShopID.text = "";
         this.tArea.text = "";
+        this._res = null;
+        this._roletype = null;
         this.iType1.visible = false;
         this.iType2.visible = false;
         this.iType3.visible = false;

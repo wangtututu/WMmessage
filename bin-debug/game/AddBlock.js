@@ -42,7 +42,7 @@ var AddBlock = (function (_super) {
             var _name = (this._para.name == this.tName.text) ? "" : ("&name=" + this.tName.text);
             var _pic = (this.lPic.text) ? ("&url=" + this.lPic.text) : "";
             var _type = (this._type == this._para.id) ? "" : ("&type=" + this._type);
-            var data = this._para.id + _name + _type;
+            var data = this._para.id + _name + _type + _pic;
             var request = Consts.CreateRequest("http://" + Consts._IP + ":8099/admin/modifytermmenu?state=mod&id=" + data, egret.HttpMethod.GET);
         }
         else if (this.tName.text && this._type && this.lPic.text) {
@@ -60,8 +60,28 @@ var AddBlock = (function (_super) {
     AddBlock.prototype.onGetComplete = function (event) {
         var request = event.currentTarget;
         console.log(request.response);
-        if (request.response == "failed:need login") {
-            alert("请登录");
+        var data = JSON.parse(request.response);
+        if (request.response.length < 20) {
+            alert("修改失败");
+            return;
+        }
+        if (this._para) {
+            var shouye = Api.ViewManager.getView(Shouye);
+            var _data = shouye["_data"];
+            for (var i = 0; i < _data.length; i++) {
+                if (_data[i].id == data.ID) {
+                    _data[i].name = data.Name;
+                    _data[i].type = data.Type;
+                    _data[i].url = data.Url;
+                    break;
+                }
+            }
+            shouye.setData(_data);
+            console.log(_data);
+        }
+        else {
+            var shouye = Api.ViewManager.getView(Shouye);
+            shouye["getMsg"]();
         }
         Api.ViewManager.closeView(AddBlock);
         // this.list.dataProvider = new eui.ArrayCollection(this._data);
@@ -113,6 +133,7 @@ var AddBlock = (function (_super) {
         this.lPic.text = null;
         this._type = null;
         this.lTitle.text = "添加";
+        this._para = null;
     };
     return AddBlock;
 }(BaseView));

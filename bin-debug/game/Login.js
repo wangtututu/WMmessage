@@ -24,15 +24,17 @@ var Login = (function (_super) {
     }
     Login.prototype.onInit = function () {
         this.gLogin.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onLogin, this);
-        this.iClose.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClose, this);
+        // this.iClose.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClose, this)
         // this.tPass.addEventListener(egret.Event.CHANGE,this.onPass,this);
     };
     Login.prototype.onOpen = function (para) {
     };
     Login.prototype.onLogin = function () {
         // console.log("11")
-        if (!this.tName.text || !this.tPass.text)
+        if (!this.tName.text || !this.tPass.text) {
+            alert("信息不完整");
             return;
+        }
         var request = Consts.CreateRequest("http://" + Consts._IP + ":8099/admin/login?from=manager&id=" + this.tName.text + "&pass=" + this.tPass.text, egret.HttpMethod.GET);
         request.responseType = egret.HttpResponseType.TEXT;
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
@@ -43,7 +45,7 @@ var Login = (function (_super) {
         var request = event.currentTarget;
         // console.log(request)
         var data = JSON.parse(request.response);
-        if (request.response.length > 10) {
+        if (request.response.length > 20) {
             this.onClose();
             var mainUI = Api.ViewManager.getView(MainUI);
             mainUI.LogSuccss(data);

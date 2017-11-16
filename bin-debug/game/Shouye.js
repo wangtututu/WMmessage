@@ -34,6 +34,9 @@ var Shouye = (function (_super) {
     Shouye.prototype.onOpen = function (para) {
         this.onClear();
         this.getMsg();
+        this.getDay(Time.GET_DAY());
+        this.getWeek(Time.GET_WEEK());
+        this.getMonth(Time.GET_MONTH());
     };
     Shouye.prototype.onAdd = function () {
         Api.ViewManager.openView(AddBlock);
@@ -43,7 +46,7 @@ var Shouye = (function (_super) {
         var dis = this.scroller.viewport.scrollV;
         if (e.wheelDelta) {
             console.log(e.wheelDelta);
-            if (e.wheelDelta == 120) {
+            if (e.wheelDelta > 0) {
                 dis -= 20;
                 dis = (dis >= 0) ? dis : 0;
             }
@@ -105,6 +108,7 @@ var Shouye = (function (_super) {
         for (var i = 0; i < this._data.length; i++) {
             this._data[i].state = 2;
         }
+        console.log(this._data);
         this.list.dataProvider = new eui.ArrayCollection(this._data);
         // console.log(this._data)
     };
@@ -112,7 +116,62 @@ var Shouye = (function (_super) {
         for (var i = 0; i < this._data.length; i++) {
             this._data[i].state = 3;
         }
+        console.log(this._data);
         this.list.dataProvider = new eui.ArrayCollection(this._data);
+    };
+    Shouye.prototype.setData = function (arr) {
+        this.list.dataProvider = new eui.ArrayCollection(arr);
+    };
+    Shouye.prototype.getDay = function (data) {
+        // var data = Time.GET_TIME(Time.GET_DAY, true);
+        console.log(data);
+        this.dayTime.text = "(" + Time.GET_TIME(data, true) + ")";
+        var request = Consts.CreateRequest("http://" + Consts._IP + ":8099/admin/orderstatistics?from=" + Math.ceil(data / 1000), egret.HttpMethod.GET);
+        request.responseType = egret.HttpResponseType.TEXT;
+        request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        request.send();
+        request.addEventListener(egret.Event.COMPLETE, this.onDayComplete, this);
+    };
+    Shouye.prototype.onDayComplete = function (event) {
+        var request = event.currentTarget;
+        console.log(request.response);
+        var data = JSON.parse(request.response);
+        this.dayNum.text = data.num;
+        this.dayCash.text = data.price;
+    };
+    Shouye.prototype.getWeek = function (data) {
+        console.log(data);
+        // var data = Time.GET_TIME(Time.GET_DAY, true);
+        this.weekTime.text = "(" + Time.GET_TIME(data, true) + " - " + Time.GET_TIME(new Date(), true) + ")";
+        var request = Consts.CreateRequest("http://" + Consts._IP + ":8099/admin/orderstatistics?from=" + Math.ceil(data / 1000), egret.HttpMethod.GET);
+        request.responseType = egret.HttpResponseType.TEXT;
+        request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        request.send();
+        request.addEventListener(egret.Event.COMPLETE, this.onWeekComplete, this);
+    };
+    Shouye.prototype.onWeekComplete = function (event) {
+        var request = event.currentTarget;
+        console.log(request.response);
+        var data = JSON.parse(request.response);
+        this.weekNum.text = data.num;
+        this.weekCash.text = data.price;
+    };
+    Shouye.prototype.getMonth = function (data) {
+        console.log(data);
+        // var data = Time.GET_TIME(Time.GET_DAY, true);
+        this.monTime.text = "(" + Time.GET_TIME(data, false) + ")";
+        var request = Consts.CreateRequest("http://" + Consts._IP + ":8099/admin/orderstatistics?from=" + Math.ceil(data / 1000), egret.HttpMethod.GET);
+        request.responseType = egret.HttpResponseType.TEXT;
+        request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        request.send();
+        request.addEventListener(egret.Event.COMPLETE, this.onMonthComplete, this);
+    };
+    Shouye.prototype.onMonthComplete = function (event) {
+        var request = event.currentTarget;
+        console.log(request.response);
+        var data = JSON.parse(request.response);
+        this.monNum.text = data.num;
+        this.monCash.text = data.price;
     };
     Shouye.prototype.onClear = function () {
         this.scroller.viewport.scrollV = 0;

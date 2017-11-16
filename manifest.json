@@ -9,7 +9,7 @@
 	],
 	"game": [
 		"bin-debug/core/view/BaseView.js",
-		"bin-debug/core/stage/StageUtil.js",
+		"bin-debug/core/timer/TimerManager.js",
 		"bin-debug/Main.js",
 		"bin-debug/QiniuUploader.js",
 		"bin-debug/ThemeAdapter.js",
@@ -45,8 +45,8 @@
 		"bin-debug/core/sound/SoundManager.js",
 		"bin-debug/core/stage/Layers.js",
 		"bin-debug/core/stage/LayerType.js",
+		"bin-debug/core/stage/StageUtil.js",
 		"bin-debug/LoadingUI.js",
-		"bin-debug/core/timer/TimerManager.js",
 		"bin-debug/core/tips/Dialogue.js",
 		"bin-debug/core/tips/TipsManager.js",
 		"bin-debug/core/utils/AnimationUtil.js",
@@ -82,6 +82,7 @@
 		"bin-debug/game/ShopListItem.js",
 		"bin-debug/game/Shouye.js",
 		"bin-debug/game/ShouyeItem.js",
+		"bin-debug/game/Time.js",
 		"bin-debug/game/WeekMoney.js"
 	]
 }

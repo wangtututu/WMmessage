@@ -23,13 +23,13 @@ var MainUI = (function (_super) {
     MainUI.prototype.onInit = function () {
         this.gMainBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onMain, this);
         this.gListBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onGetList, this);
-        this.lLogin.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onLogin, this);
+        // this.lLogin.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onLogin, this);
         this.gShopBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onShop, this);
         this.gManBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onMan, this);
     };
     MainUI.prototype.onOpen = function (para) {
         this.onClear();
-        this.onMain();
+        // this.onMain();
     };
     MainUI.prototype.onClear = function () {
         this.scroller1.viewport.scrollV = 0;
@@ -37,18 +37,6 @@ var MainUI = (function (_super) {
     MainUI.prototype.onMain = function () {
         Api.ViewManager.closeViewsByLayer(LayerType.UI_TOP);
         Api.ViewManager.openView(Shouye);
-    };
-    MainUI.prototype.onGetDay = function () {
-        Api.ViewManager.closeViewsByLayer(LayerType.UI_TOP);
-        Api.ViewManager.openView(DayMoney);
-    };
-    MainUI.prototype.onGetWeek = function () {
-        Api.ViewManager.closeViewsByLayer(LayerType.UI_TOP);
-        Api.ViewManager.openView(WeekMoney);
-    };
-    MainUI.prototype.onGetMouth = function () {
-        Api.ViewManager.closeViewsByLayer(LayerType.UI_TOP);
-        Api.ViewManager.openView(MouthMoney);
     };
     MainUI.prototype.onGetList = function () {
         Api.ViewManager.closeViewsByLayer(LayerType.UI_TOP);
@@ -68,7 +56,8 @@ var MainUI = (function (_super) {
     MainUI.prototype.LogSuccss = function (a) {
         this.lLogin.text = a.ID;
         console.log(a);
-        this.lLogin.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onLogin, this);
+        this.onMain();
+        // this.lLogin.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onLogin, this)
         this.lLogin.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onDetail, this);
     };
     MainUI.prototype.onDetail = function () {

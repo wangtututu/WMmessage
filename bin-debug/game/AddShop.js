@@ -23,7 +23,6 @@ var AddShop = (function (_super) {
         return _this;
     }
     AddShop.prototype.onInit = function () {
-        QiniuUploader.upload();
         this.gAddBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onAdd, this);
         this.bClass.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClass, this);
         this.bPic.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onPic, this);
@@ -46,9 +45,12 @@ var AddShop = (function (_super) {
     AddShop.prototype.onGetComplete = function (event) {
         var request = event.currentTarget;
         console.log(request.response);
-        if (request.response.length > 10) {
+        if (request.response.length > 20) {
             var data = JSON.parse(request.response);
             Api.ViewManager.openView(AddMan, data.ID);
+        }
+        else {
+            alert("添加失败");
         }
     };
     AddShop.prototype.onClass = function () {
@@ -74,34 +76,37 @@ var AddShop = (function (_super) {
         }
     };
     AddShop.prototype.getMsg = function () {
-        if (this.tName.text && this.tPhone.text && this.tAddr.text && this.tOwner.text && this.tDesc.text && this.picUrl && Consts.ClASS_ARR.length && this.tTp.text)
-            return null;
-        var _send = '{"min":' + this.lQisong.text + ',"fee":' + this.tPeisong.text + '}';
-        var _fees;
-        var fee1 = "";
-        var fee2 = "";
-        var fee3 = "";
-        if (this.tMan1.text && this.tJian1.text) {
-            fee1 = '{"max":' + this.tMan1.text + ',"fee":' + this.tJian1.text + '}';
-        }
-        if (this.tMan2.text && this.tJian2.text) {
-            fee2 = ',{"max":' + this.tMan2.text + ',"fee":' + this.tJian2.text + '}';
-        }
-        if (this.tMan3.text && this.tJian3.text) {
-            fee3 = ',{"max":' + this.tMan3.text + ',"fee":' + this.tJian3.text + '}';
-        }
-        _fees = '[' + fee1 + fee2 + fee3 + ']';
-        var _class = "[";
-        if (Consts.ClASS_ARR.length) {
-            _class += '"' + Consts.ClASS_ARR[0].id + '"';
-            for (var i = 1; i < Consts.ClASS_ARR.length; i++) {
-                _class += ',"' + Consts.ClASS_ARR[i].id + '"';
+        if (this.tName.text && this.tPhone.text && this.tAddr.text && this.tOwner.text && this.tDesc.text && this.picUrl && Consts.ClASS_ARR.length && this.tTp.text) {
+            var _send = '{"min":' + this.lQisong.text + ',"fee":' + this.tPeisong.text + '}';
+            var _fees;
+            var fee1 = "";
+            var fee2 = "";
+            var fee3 = "";
+            if (this.tMan1.text && this.tJian1.text) {
+                fee1 = '{"max":' + this.tMan1.text + ',"fee":' + this.tJian1.text + '}';
             }
+            if (this.tMan2.text && this.tJian2.text) {
+                fee2 = ',{"max":' + this.tMan2.text + ',"fee":' + this.tJian2.text + '}';
+            }
+            if (this.tMan3.text && this.tJian3.text) {
+                fee3 = ',{"max":' + this.tMan3.text + ',"fee":' + this.tJian3.text + '}';
+            }
+            _fees = '[' + fee1 + fee2 + fee3 + ']';
+            var _class = "[";
+            if (Consts.ClASS_ARR.length) {
+                _class += '"' + Consts.ClASS_ARR[0].id + '"';
+                for (var i = 1; i < Consts.ClASS_ARR.length; i++) {
+                    _class += ',"' + Consts.ClASS_ARR[i].id + '"';
+                }
+            }
+            _class += "]";
+            var data = "name=" + this.tName.text + "&tel=" + this.tPhone.text + "&addr=" + this.tAddr.text + "&owner=" + this.tOwner.text + "&desc=" + this.tDesc.text + "&pic=" + this.picUrl + "&class=" + _class + "&sendstandard=" + _send + "&tp=" + this.tTp.text + "&feestandard=" + _fees;
+            console.log(data);
+            return data;
         }
-        _class += "]";
-        var data = "name=" + this.tName.text + "&tel=" + this.tPhone.text + "&addr=" + this.tAddr.text + "&owner=" + this.tOwner.text + "&desc=" + this.tDesc.text + "&pic=" + this.picUrl + "&class=" + _class + "&sendstandard=" + _send + "&tp=" + this.tTp.text + "&feestandard=" + _fees;
-        console.log(data);
-        return data;
+        else {
+            return null;
+        }
     };
     AddShop.prototype.onClear = function () {
         this.tName.text = null;
