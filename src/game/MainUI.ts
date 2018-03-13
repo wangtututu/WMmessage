@@ -9,6 +9,10 @@ class MainUI extends BaseView {
     private gShopBtn:eui.Group;
     private gManBtn:eui.Group;
     private lLogin:eui.Label;
+    private gUserBtn:eui.Group;
+    private gTermBtn:eui.Group;
+    private gOrderBtn:eui.Group;
+    
 
 
     public constructor() {
@@ -21,6 +25,9 @@ class MainUI extends BaseView {
         // this.lLogin.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onLogin, this);
         this.gShopBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onShop, this);
         this.gManBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onMan, this);
+        this.gUserBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onUser, this);
+        this.gTermBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTerm, this);
+        this.gOrderBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onOrder, this);
     }
 
     public onOpen(para): void {
@@ -49,6 +56,18 @@ class MainUI extends BaseView {
     private onMan():void{
         Api.ViewManager.closeViewsByLayer(LayerType.UI_TOP);
         Api.ViewManager.openView(AddMan);
+    } 
+    private onUser():void{
+        Api.ViewManager.closeViewsByLayer(LayerType.UI_TOP);
+        Api.ViewManager.openView(UserList);
+    }
+    private onTerm():void{
+        Api.ViewManager.closeViewsByLayer(LayerType.UI_TOP);
+        Api.ViewManager.openView(AddClass);
+    }
+    private onOrder():void{
+        Api.ViewManager.closeViewsByLayer(LayerType.UI_TOP);
+        Api.ViewManager.openView(OrderList);
     }
     public LogSuccss(a:any):void{
         this.lLogin.text = a.ID;

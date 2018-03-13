@@ -16,7 +16,8 @@ class QiniuUploader {
             //    // do something
             //    return uptoken;
             // },
-            uptoken_url: 'http://192.168.0.199:8099/uptoken',            //Ajax请求upToken的Url，**强烈建议设置**（服务端提供）
+            uptoken_url: 'http://114.6.231.102:8099/uptoken',            //Ajax请求upToken的Url，**强烈建议设置**（服务端提供）
+            //uptoken_url: 'http://192.168.0.199:8099/uptoken',
             get_new_uptoken: false,             // 设置上传文件的时候是否每次都重新获取新的uptoken
             // downtoken_url: '/downtoken',
             // Ajax请求downToken的Url，私有空间时使用，JS-SDK将向该地址POST文件的key和domain，服务端返回的JSON必须包含url字段，url值为该文件的下载地址

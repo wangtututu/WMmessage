@@ -11,6 +11,7 @@ class AddBlock extends BaseView {
     private gClick: eui.Group;
     private lTitle: eui.Label;
     private iReturn: eui.Image;
+    private tExt:eui.TextInput;
     private _para;
     private _type;
 
@@ -40,9 +41,11 @@ class AddBlock extends BaseView {
             var _name = (this._para.name == this.tName.text) ? "" : ("&name=" + this.tName.text);
             var _pic = (this.lPic.text) ? ("&url=" + this.lPic.text) : "";
             var _type = (this._type == this._para.id) ? "" : ("&type=" + this._type);
-            var data = this._para.id + _name + _type + _pic;
+            var _ext = (this._para.ext == this.tExt.text) ? "" : ("&type=" + this.tExt.text);
+            var data = this._para.id + _name + _type + _pic + _ext;
             var request = Consts.CreateRequest("http://" + Consts._IP + ":8099/admin/modifytermmenu?state=mod&id=" + data, egret.HttpMethod.GET);
         } else if (this.tName.text && this._type && this.lPic.text) {
+            var _ext = (this.tExt.text) ? ("&type=" + this.tExt.text) : "";
             var data = "name=" + this.tName.text + "&type=" + this._type + "&url=" + this.lPic.text;
             var request = Consts.CreateRequest("http://" + Consts._IP + ":8099/admin/modifytermmenu?state=add&" + data, egret.HttpMethod.GET);
         } else {

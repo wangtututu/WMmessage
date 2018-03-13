@@ -101,7 +101,7 @@ class Shouye extends BaseView {
     private onGetComplete(event: egret.Event): void {
         var request = <egret.HttpRequest>event.currentTarget;
         this._data = JSON.parse(request.response);
-        console.log(this._data)
+        // console.log(this._data)
         this.list.dataProvider = new eui.ArrayCollection(this._data);
     }
     private Item(): void {
@@ -114,7 +114,7 @@ class Shouye extends BaseView {
         for (var i = 0; i < this._data.length; i++) {
             this._data[i].state = 2;
         }
-        console.log(this._data)
+        // console.log(this._data)
         this.list.dataProvider = new eui.ArrayCollection(this._data);
         // console.log(this._data)
     }
@@ -122,7 +122,7 @@ class Shouye extends BaseView {
         for (var i = 0; i < this._data.length; i++) {
             this._data[i].state = 3;
         }
-        console.log(this._data)
+        // console.log(this._data)
         this.list.dataProvider = new eui.ArrayCollection(this._data);
     }
     public setData(arr): void {
@@ -130,7 +130,7 @@ class Shouye extends BaseView {
     }
     private getDay(data): void {
         // var data = Time.GET_TIME(Time.GET_DAY, true);
-        console.log(data)
+        // console.log(data)
         this.dayTime.text = "(" + Time.GET_TIME(data, true) + ")";
         var request = Consts.CreateRequest("http://" + Consts._IP + ":8099/admin/orderstatistics?from=" + Math.ceil(data/1000), egret.HttpMethod.GET);
         request.responseType = egret.HttpResponseType.TEXT;
@@ -140,13 +140,13 @@ class Shouye extends BaseView {
     }
     private onDayComplete(event: egret.Event): void {
         var request = <egret.HttpRequest>event.currentTarget;
-        console.log(request.response)
+        // console.log(request.response)
         var data = JSON.parse(request.response)
         this.dayNum.text = data.num;
         this.dayCash.text = data.price;
     }
     private getWeek(data): void {
-        console.log(data)
+        // console.log(data)
         // var data = Time.GET_TIME(Time.GET_DAY, true);
         this.weekTime.text = "(" + Time.GET_TIME(data, true) + " - " + Time.GET_TIME(new Date(), true) + ")";
         var request = Consts.CreateRequest("http://" + Consts._IP + ":8099/admin/orderstatistics?from=" +  Math.ceil(data/1000), egret.HttpMethod.GET);
@@ -157,13 +157,13 @@ class Shouye extends BaseView {
     }
     private onWeekComplete(event: egret.Event): void {
         var request = <egret.HttpRequest>event.currentTarget;
-        console.log(request.response)
+        // console.log(request.response)
         var data = JSON.parse(request.response)
         this.weekNum.text = data.num;
         this.weekCash.text = data.price;
     }
     private getMonth(data): void {
-        console.log(data)
+        // console.log(data)
         // var data = Time.GET_TIME(Time.GET_DAY, true);
         this.monTime.text = "(" + Time.GET_TIME(data, false) + ")";
         var request = Consts.CreateRequest("http://" + Consts._IP + ":8099/admin/orderstatistics?from=" +  Math.ceil(data/1000), egret.HttpMethod.GET);
@@ -174,7 +174,7 @@ class Shouye extends BaseView {
     }
     private onMonthComplete(event: egret.Event): void {
         var request = <egret.HttpRequest>event.currentTarget;
-        console.log(request.response)
+        // console.log(request.response)
         var data = JSON.parse(request.response)
         this.monNum.text = data.num;
         this.monCash.text = data.price;

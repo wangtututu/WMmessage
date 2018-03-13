@@ -25,20 +25,22 @@ class ShopList extends BaseView {
     }
     private getMsg() {
         
-        var request = Consts.CreateRequest("http://" + Consts._IP + ":8099/hotshangjia?page=1", egret.HttpMethod.GET);
+        var request = Consts.CreateRequest("http://" + Consts._IP + ":8099/hotshangjia", egret.HttpMethod.GET);
         request.responseType = egret.HttpResponseType.TEXT;
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         request.send();
         request.addEventListener(egret.Event.COMPLETE, this.onGetComplete, this);
 
     }
+    private _data;
     private onChange() {
         Api.ViewManager.closeView(ShopList)
         Api.ViewManager.openView(ShopDetail, this.list.selectedItem);
+        this._data=this.list.selectedItem;
     }
     private onGetComplete(event: egret.Event): void {
         var request = <egret.HttpRequest>event.currentTarget;
-        // console.log(request.response)
+        console.log(request.response)
         var data = JSON.parse(request.response)
         this.list.dataProvider = new eui.ArrayCollection(data)
     }
