@@ -4,8 +4,17 @@
 		<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xFFFFFF"/>
 		<e:Group height="65" anchorOffsetY="0" y="0" left="0" right="0">
 			<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0x2acedd"/>
+			<e:Label id="lModify" text="修改店铺" size="22" right="262" bottom="12"/>
 			<e:Label id="lName" text="店铺名称1" size="24" scaleX="1" scaleY="1" verticalCenter="0" textColor="0x000000" left="50"/>
-			<e:Label id="lAdd" text="添加菜品" size="22" bottom="11" right="12"/>
+			<e:Label id="lAdd" text="添加菜品" size="22" right="12" bottom="12"/>
+			<e:Group id="gBus1" y="25" right="191">
+				<e:Rect left="0" right="0" top="0" bottom="0" strokeWeight="1" fillAlpha="0"/>
+				<e:Label text="营业" textColor="0x000000" size="18" left="12" right="12" top="8" bottom="8"/>
+			</e:Group>
+			<e:Group id="gBus0" y="25" right="116">
+				<e:Rect left="0" right="0" top="0" bottom="0" strokeWeight="1" fillAlpha="0"/>
+				<e:Label text="修业" size="18" left="12" right="12" top="8" bottom="8" textColor="0x999999"/>
+			</e:Group>
 		</e:Group>
 		<e:Group height="60" left="0" right="0" y="65">
 			<e:Group id="gIntex" top="0" bottom="0" height="60">

@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="AddBlockSkin" width="800" height="600" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
 	<e:Rect left="0" right="0" top="0" bottom="0" fillAlpha="0.5"/>
-	<e:Group width="400" height="300" verticalCenter="0" horizontalCenter="0">
+	<e:Group width="400" height="359" verticalCenter="29.5" horizontalCenter="0" anchorOffsetY="0">
 		<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xcccccc"/>
 		<e:Group x="43" y="61">
 			<e:Group y="0" x="0">
 				<e:Label text="名称:" x="10" size="24" verticalCenter="0" textColor="0x000000"/>
 				<e:TextInput id="tName" width="242" height="34" x="73" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0"/>
+			</e:Group>
+			<e:Group y="164" x="0">
+				<e:Label text="扩展值:" x="10" size="24" verticalCenter="0" textColor="0x000000"/>
+				<e:TextInput id="tExt" width="211" height="34" x="104" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0"/>
 			</e:Group>
 			<e:Group id="gType1" x="16" y="51">
 				<e:Rect left="0" right="0" top="0" bottom="0" fillAlpha="0" strokeWeight="1"/>
@@ -24,7 +28,7 @@
 				<e:Label id="lPic" text="" x="175" textAlign="center" size="20" verticalCenter="12"/>
 			</e:Group>
 		</e:Group>
-		<e:Group id="gClick" y="231" horizontalCenter="0">
+		<e:Group id="gClick" y="291" horizontalCenter="0">
 			<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0x23e214"/>
 			<e:Label text="确认" size="24" top="12" bottom="12" left="80" right="80" textColor="0x000000"/>
 		</e:Group>

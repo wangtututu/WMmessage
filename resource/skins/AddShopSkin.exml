@@ -46,11 +46,19 @@
 				<e:Label text="配送费:" x="12" size="24" verticalCenter="0" textColor="0x000000"/>
 				<e:TextInput id="tPeisong" width="164" height="38" x="135" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0"/>
 			</e:Group>
+				<e:Group x="80" y="80">
+					<e:Label text="热度(0-100):" x="12" size="24" verticalCenter="0" textColor="0x000000"/>
+					<e:TextInput id="tHot" width="142" height="38" x="157" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0"/>
+				</e:Group>
+				<e:Group x="90" y="90">
+					<e:Label text="抽成比例:" x="12" size="24" verticalCenter="0" textColor="0x000000"/>
+					<e:TextInput id="tScale" width="164" height="38" x="135" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0"/>
+				</e:Group>
 			<e:layout>
 				<e:TileLayout requestedColumnCount="2" horizontalGap="12" paddingLeft="0" paddingRight="10" paddingTop="15" verticalGap="12" paddingBottom="10"/>
 			</e:layout>
 			</e:Group>
-			<e:Group anchorOffsetX="0" anchorOffsetY="0" y="218" left="0" right="0">
+			<e:Group anchorOffsetX="0" anchorOffsetY="0" y="265" left="0" right="0">
 			<e:Label text="拥有分类:" x="12" size="24" textColor="0x000000" verticalCenter="0.5"/>
 				<e:Label text="*" x="6" y="4" textColor="0xF21010" size="22"/>
 			<e:TextInput id="tClass" width="337" height="38" x="135" y="1" anchorOffsetX="0" enabled="false"/>
@@ -59,7 +67,7 @@
 				<e:BasicLayout/>
 			</e:layout>
 			</e:Group>
-			<e:Group anchorOffsetX="0" anchorOffsetY="0" y="270" left="0" right="0">
+			<e:Group anchorOffsetX="0" anchorOffsetY="0" y="317" left="0" right="0">
 			<e:layout>
 				<e:BasicLayout/>
 			</e:layout>
@@ -92,7 +100,7 @@
 				</e:layout>
 			</e:Group>
 			</e:Group>
-			<e:Group anchorOffsetX="0" anchorOffsetY="0" y="367" left="0" right="0">
+			<e:Group anchorOffsetX="0" anchorOffsetY="0" y="414" left="0" right="0">
 				<e:Label text="添加图片:" x="12" size="24" textColor="0x000000" verticalCenter="0.5"/>
 				<e:Label text="*" x="6" y="4" textColor="0xF21010" size="22"/>
 				<e:Button id="bPic" label="选择文件" x="135" y="2" anchorOffsetX="0" width="95" anchorOffsetY="0" height="36"/>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="UserItemSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="gMask" horizontalCenter="0" verticalCenter="0">
+		<e:Rect left="0" right="0" top="0" bottom="0" fillAlpha="0" strokeWeight="1"/>
+		<e:Group x="0" verticalCenter="0" width="144">
+		<e:Rect left="0" right="0" top="0" bottom="0" strokeWeight="1" fillAlpha="0" visible="false"/>
+		<e:Label id="lName" text="姓名" textColor="0x000000" size="22" top="6" bottom="6" horizontalCenter="0" maxWidth="140"/>
+		</e:Group>
+		<e:Group x="190" verticalCenter="0" width="136" anchorOffsetX="0">
+		<e:Rect left="0" right="0" top="0" bottom="0" strokeWeight="1" fillAlpha="0" anchorOffsetX="0" visible="false"/>
+		<e:Label id="lQQ" text="13101783621" textColor="0x000000" size="22" top="6" bottom="6" textAlign="center" horizontalCenter="0"/>
+		</e:Group>
+		<e:Group x="354" verticalCenter="0" width="369" anchorOffsetX="0">
+		<e:Rect left="0" right="0" top="0" bottom="0" strokeWeight="1" fillAlpha="0" visible="false"/>
+		<e:Label id="lRes" text="姓名" textColor="0x000000" size="22" top="6" bottom="6" maxHeight="25" anchorOffsetX="0" left="0" right="11"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

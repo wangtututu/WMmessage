@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="DelClassItemSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" width="220" height="50">
+	<e:Label id="classname" text="分类名字" textColor="0x000000" width="120" height="30" horizontalCenter="0" verticalCenter="0"/>
+	<e:Rect left="0" right="0" top="0" bottom="0" fillAlpha="0" strokeWeight="2" strokeColor="0x000000"/>
+</e:Skin>

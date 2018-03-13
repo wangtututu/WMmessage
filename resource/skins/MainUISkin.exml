@@ -3,7 +3,7 @@
 	<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xffffff" locked="true"/>
 	<e:Group height="80" left="0" right="0" top="0" anchorOffsetY="0">
 		<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xdf2a61"/>
-		<e:Label text="XX外卖后台管理系统" verticalCenter="0" horizontalCenter="0"/>
+		<e:Label text="甲乙外卖后台管理系统" verticalCenter="0" horizontalCenter="0"/>
 		<e:Label id="lLogin" text="登录/注册" y="8" size="18" right="11"/>
 	</e:Group>
 	<e:Group width="200" top="80" bottom="10" anchorOffsetX="0" left="0">
@@ -18,12 +18,24 @@
 					<e:Label text="商家列表" textColor="0x000000" horizontalCenter="0" top="20" bottom="20" size="24"/>
 					<e:Rect height="2" left="0" right="0" bottom="0"/>
 				</e:Group>
+				<e:Group id="gUserBtn" y="76" left="0" right="0" width="200" x="10" scaleX="1" scaleY="1">
+					<e:Label text="用户列表" textColor="0x000000" horizontalCenter="0" top="20" bottom="20" size="24"/>
+					<e:Rect height="2" left="0" right="0" bottom="0"/>
+				</e:Group>
 				<e:Group id="gShopBtn" y="106" left="0" right="0" width="200" x="40" scaleX="1" scaleY="1">
 					<e:Label text="注册商家" textColor="0x000000" horizontalCenter="0" top="20" bottom="20" size="24"/>
 					<e:Rect height="2" left="0" right="0" bottom="0"/>
 				</e:Group>
 				<e:Group id="gManBtn" y="116" left="0" right="0" width="200" x="50" scaleX="1" scaleY="1">
 					<e:Label text="注册用户" textColor="0x000000" horizontalCenter="0" top="20" bottom="20" size="24"/>
+					<e:Rect height="2" left="0" right="0" bottom="0"/>
+				</e:Group>
+				<e:Group id="gTermBtn" y="126" left="0" right="0" width="200" x="60" scaleX="1" scaleY="1">
+					<e:Label text="分类管理" textColor="0x000000" horizontalCenter="0" top="20" bottom="20" size="24"/>
+					<e:Rect height="2" left="0" right="0" bottom="0"/>
+				</e:Group>
+				<e:Group id="gOrderBtn" y="136" left="0" right="0" width="200" x="70" scaleX="1" scaleY="1">
+					<e:Label text="全部订单" textColor="0x000000" horizontalCenter="0" top="20" bottom="20" size="24"/>
 					<e:Rect height="2" left="0" right="0" bottom="0"/>
 				</e:Group>
 				<e:layout>

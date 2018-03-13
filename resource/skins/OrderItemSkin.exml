@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="OrderItemSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect left="0" right="0" top="0" bottom="0" fillAlpha="0" strokeWeight="1"/>
+	<e:Group id="gMask" verticalCenter="0" left="0">
+		<e:Group x="0" verticalCenter="0" width="205">
+		<e:Rect left="0" right="0" top="0" bottom="0" strokeWeight="1" fillAlpha="0" visible="false"/>
+		<e:Label id="lTime" text="2018/11/1 12:12:12" textColor="0x000000" size="22" top="6" bottom="6" maxWidth="140" anchorOffsetX="0" width="205" horizontalCenter="0" textAlign="center"/>
+		</e:Group>
+		<e:Group x="190" verticalCenter="0" anchorOffsetX="0" width="220">
+		<e:Rect left="0" right="0" top="0" bottom="0" strokeWeight="1" fillAlpha="0" anchorOffsetX="0" visible="false"/>
+		<e:Label id="llAddr" text="地址地址抵制抵制地址" textColor="0x000000" size="22" top="6" bottom="6" horizontalCenter="0" maxWidth="220" maxHeight="22"/>
+		</e:Group>
+		<e:Group x="354" verticalCenter="0" anchorOffsetX="0" width="110">
+		<e:Rect left="0" right="0" top="0" bottom="0" strokeWeight="1" fillAlpha="0" visible="false"/>
+		<e:Label id="lState" text="这状态啦啦" textColor="0x000000" size="22" top="6" bottom="6" maxHeight="25" anchorOffsetX="0" horizontalCenter="0" textAlign="center" maxWidth="110"/>
+		</e:Group>
+		<e:Group x="364" verticalCenter="0" anchorOffsetX="0" y="10" width="154">
+			<e:Rect left="0" right="0" top="0" bottom="0" strokeWeight="1" fillAlpha="0" visible="false"/>
+			<e:Label id="lShop" text="店铺名字是这个" textColor="0x000000" size="22" top="6" bottom="6" maxHeight="22" anchorOffsetX="0" horizontalCenter="0" maxWidth="154" textAlign="center"/>
+		</e:Group>
+		<e:Group x="374" verticalCenter="0" anchorOffsetX="0" y="20" width="80">
+			<e:Rect left="0" right="0" top="0" bottom="0" strokeWeight="1" fillAlpha="0" visible="false"/>
+			<e:Label id="lSender" text="送餐员" textColor="0x000000" size="22" top="6" bottom="6" anchorOffsetX="0" horizontalCenter="0" maxWidth="66" maxHeight="22" textAlign="center"/>
+		</e:Group>
+		<e:Group x="384" verticalCenter="0" anchorOffsetX="0" y="30" width="158">
+			<e:Rect left="0" right="0" top="0" bottom="0" strokeWeight="1" fillAlpha="0" visible="false"/>
+			<e:Label id="lOrderid" text="1511320900000" textColor="0x000000" size="22" top="6" bottom="6" anchorOffsetX="0" horizontalCenter="0" maxHeight="22" textAlign="center"/>
+		</e:Group>
+		<e:layout>
+			<e:HorizontalLayout gap="30" paddingLeft="15" paddingRight="15"/>
+		</e:layout>
+	</e:Group>
+</e:Skin>

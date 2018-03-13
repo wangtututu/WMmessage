@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ModifyManSkin" width="800" height="600" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group left="201" right="-1" top="79" bottom="1">
+		<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xFFFFFF"/>
+		<e:Group height="65" anchorOffsetY="0" y="0" left="0" right="0">
+		<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0x2ACEDD"/>
+		<e:Label text="修改用户" size="24" scaleX="1" scaleY="1" verticalCenter="0" textColor="0x000000" left="50"/>
+		</e:Group>
+		<e:Group y="71" left="10" right="10">
+		<e:Group anchorOffsetX="0" anchorOffsetY="0" y="0" left="0" right="0">
+			<e:Group x="0" y="0">
+			<e:Label text="用户姓名:" x="12" size="24" verticalCenter="0" textColor="0x000000"/>
+			<e:TextInput id="tName" width="164" height="38" x="135" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0"/>
+			</e:Group>
+			<e:Group x="20" y="20">
+			<e:Label text="用户地址:" x="12" size="24" verticalCenter="0" textColor="0x000000"/>
+			<e:TextInput id="tAddr" width="164" height="38" x="135" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0"/>
+			</e:Group>
+			<e:Group x="30" y="30">
+			<e:Label text="登录密码:" x="12" size="24" verticalCenter="0" textColor="0x000000"/>
+			<e:TextInput id="tPass" width="164" height="38" x="135" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0"/>
+			</e:Group>
+			<e:Group x="40" y="40">
+			<e:Label text="qq/微信:" x="12" size="24" verticalCenter="0" textColor="0x000000"/>
+			<e:TextInput id="tQQ" width="164" height="38" x="135" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0"/>
+			</e:Group>
+			<e:Group x="60" y="60">
+			<e:Label text="店铺ID:" x="12" size="24" verticalCenter="0" textColor="0x000000"/>
+			<e:TextInput id="tShopID" width="164" height="38" x="135" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0"/>
+			</e:Group>
+			<e:Group x="-10" y="-71">
+				<e:Group id="gPass" verticalCenter="0" y="50" scaleX="1" scaleY="1" horizontalCenter="0">
+					<e:Rect left="0" right="0" top="0" bottom="0" strokeWeight="1" fillAlpha="0"/>
+					<e:Label text="解雇" textAlign="center" size="22" verticalCenter="0" top="8" bottom="8" left="60" right="60" textColor="0x000000"/>
+					<e:Image id="iPass" source="xuanzhong_png" right="0" top="1"/>
+				</e:Group>
+			</e:Group>
+			<e:layout>
+			<e:TileLayout requestedColumnCount="2" horizontalGap="12" paddingLeft="0" paddingRight="10" paddingTop="15" verticalGap="12" paddingBottom="10"/>
+			</e:layout>
+		</e:Group>
+		</e:Group>
+		<e:Group id="gReturn" x="71" y="434">
+		<e:Rect fillColor="0x25CC10" left="-1" right="1" top="0" bottom="0"/>
+		<e:Label text="返回" verticalCenter="0" horizontalCenter="0" right="100" left="100" top="20" bottom="20" size="26"/>
+		</e:Group>
+		<e:Group id="gAddBtn" x="447" y="434">
+			<e:Rect fillColor="0x25CC10" left="-1" right="1" top="0" bottom="0"/>
+			<e:Label text="确认修改" verticalCenter="0" horizontalCenter="0" right="100" left="100" top="20" bottom="20" size="26"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="UserListSkin" width="800" height="600" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group left="200" right="0" top="80" bottom="0">
+		<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xFFFFFF"/>
+		<e:Group height="65" anchorOffsetY="0" left="0" right="0">
+		<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0x2ACEDD"/>
+		<e:Label text="用户列表" size="24" scaleX="1" scaleY="1" verticalCenter="0" textColor="0x000000" left="50"/>
+		</e:Group>
+		<e:Scroller id="scroller" anchorOffsetY="0" bottom="0" top="70" left="0" right="0" scrollPolicyV="auto" scrollPolicyH="off">
+			<e:Group anchorOffsetX="0" width="323" anchorOffsetY="0" height="265">
+				<e:Group horizontalCenter="0" x="22" scaleX="1" scaleY="1" top="0">
+					<e:Group x="0" verticalCenter="0">
+					<e:Rect left="0" right="0" top="0" bottom="0" fillAlpha="0"/>
+					<e:Label text="姓名" textColor="0x000000" size="22" left="50" right="50" top="6" bottom="6"/>
+					</e:Group>
+					<e:Group x="190" verticalCenter="0">
+					<e:Rect left="0" right="0" top="0" bottom="0" strokeWeight="0" fillAlpha="0"/>
+					<e:Label text="qq/微信" textColor="0x000000" size="22" top="6" bottom="6" horizontalCenter="0"/>
+					</e:Group>
+					<e:Group x="411" verticalCenter="0">
+					<e:Rect left="0" right="0" top="0" bottom="0" fillAlpha="0"/>
+					<e:Label text="地址" textColor="0x000000" size="22" left="50" right="50" top="6" bottom="6"/>
+					</e:Group>
+				</e:Group>
+				<e:List id="list" scaleX="1" scaleY="1" top="43" horizontalCenter="0">
+					<e:layout>
+						<e:VerticalLayout gap="11"/>
+					</e:layout>
+				</e:List>
+				<e:Group x="132" y="113">
+					<e:Label id="lLast" text="上一页" x="0" verticalCenter="0" textColor="0x000000" size="20"/>
+					<e:Label id="lNext" text="下一页" x="100.5" verticalCenter="0" textColor="0x000000" size="20"/>
+				</e:Group>
+				<e:layout>
+					<e:VerticalLayout horizontalAlign="left" gap="17"/>
+				</e:layout>
+			</e:Group>
+		</e:Scroller>
+	</e:Group>
+</e:Skin>
